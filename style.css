@@ -1,0 +1,94 @@
+.wrapper {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "s s n n n n n n n n a a"
+        "s s m m m m m m m m a a"
+        "s s m m m m m m m m a a"
+        "s s m m m m m m m m a a"
+        "s s m m m m m m m m a a"
+        "s s m m m m m m m m a a"
+        "s s m m m m m m m m a a"
+        "s s m m m m m m m m a a"
+        "s s m m m m m m m m a a"
+        "s s m m m m m m m m a a"
+        "f f f f f f f f f f f f"
+    ;
+}
+
+.box {
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.box-1 {
+    grid-area: h;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.box-2 {
+    grid-area: s;
+}
+
+.box-3 {
+    grid-area: n;
+}
+
+.box-4 {
+    grid-area: m;
+}
+
+.box-5 {
+    grid-area: a;
+}
+
+.box-6 {
+    grid-area: f;
+}
+
+
+@media only screen and (max-width:900px) {
+    .wrapper {
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "n n n n n n n n n n n n"
+            "s s s m m m m m m m m m"
+            "s s s m m m m m m m m m"
+            "s s s m m m m m m m m m"
+            "s s s m m m m m m m m m"
+            "s s s m m m m m m m m m"
+            "s s s m m m m m m m m m"
+            "s s s m m m m m m m m m"
+            "s s s m m m m m m m m m"
+            "s s s m m m m m m m m m"
+            "a a a f f f f f f f f f"
+        ;
+
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .wrapper {
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "n n n n n n n n n n n n"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "m m m m m m m m m m m m"
+            "s s s s s s s s s s s s"
+            "a a a a a a a a a a a a"
+            "f f f f f f f f f f f f"
+        ;
+
+    }
+}
